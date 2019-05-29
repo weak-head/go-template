@@ -38,8 +38,7 @@ fmt:
 	@if [ -n "$$(go fmt ./...)" ]; then echo 'Please run go fmt on your code.' && exit 1; fi
 
 .PHONY : install_dependencies
-install_dependencies:
-	get
+install_dependencies: get
 
 .PHONY: get
 get:
