@@ -1,0 +1,23 @@
+dist: xenial
+language: go
+go:
+- 1.11.x
+- 1.12.x
+
+env:
+  global:
+  - DEBUG=true
+
+before_install:
+- export REPOSITORY_ROOT=${TRAVIS_BUILD_DIR}
+
+install: make install_dependencies
+
+script:
+- make test
+- make vet
+- make errcheck
+- if [[ "$TRAVIS_GO_VERSION" == 1.12* ]]; then make fmt; fi
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
