@@ -1,3 +1,4 @@
+export GO111MODULE=on
 
 default: fmt vet errcheck test lint
 
