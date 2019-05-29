@@ -11,13 +11,13 @@
 [codecov-img]: https://codecov.io/gh/weak-head/go-template/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/weak-head/go-template
 
-[goreport-img]: https://goreportcard.com/badge/github.com/weak-head/gobox
-[goreport-url]: https://goreportcard.com/report/github.com/weak-head/gobox
+[goreport-img]: https://goreportcard.com/badge/github.com/weak-head/go-template
+[goreport-url]: https://goreportcard.com/report/github.com/weak-head/go-template
 
-[godoc-img]: https://godoc.org/github.com/weah-head/gobox?status.svg
-[godoc-url]: https://godoc.org/github.com/weak-head/gobox
+[godoc-img]: https://godoc.org/github.com/weah-head/go-template?status.svg
+[godoc-url]: https://godoc.org/github.com/weak-head/go-template
 
-Go project template with go module, unit tests, Makefiile and integration with TravisCI and CodeCov.
+Go project template that has go module, unit tests, Makefile and integration with TravisCI and CodeCov.
 
 # Build
 
@@ -29,6 +29,11 @@ make build
 # Test
 
 ```bash
-# Run test for all packages in the module
+# Run tests for all packages in the module and
+# generates code coverage report
 make test
 ```
+
+# Project Layout
+
+The example of the good project layout: [https://github.com/golang-standards/project-layout](https://github.com/golang-standards/project-layout)
