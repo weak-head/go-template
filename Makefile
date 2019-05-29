@@ -13,8 +13,7 @@ test:
 		fi \
 	done
 
-
-GOLINT := $(shell command -v golint)
+GOLINT := $(command -v golint)
 .PHONY: lint
 lint:
 ifndef GOLINT
@@ -22,13 +21,11 @@ ifndef GOLINT
 endif
 	go list ./... | xargs golint
 
-
 .PHONY: vet
 vet:
 	go vet ./...
 
-
-ERRCHECK := $(shell command -v errcheck)
+ERRCHECK := $(command -v errcheck)
 .PHONY: errcheck
 errcheck:
 ifndef ERRCHECK
@@ -36,20 +33,17 @@ ifndef ERRCHECK
 endif
 	errcheck -ignorepkg fmt github.com/Shopify/sarama/...
 
-
 .PHONY: fmt
 fmt:
 	@if [ -n "$$(go fmt ./...)" ]; then echo 'Please run go fmt on your code.' && exit 1; fi
 
-
 .PHONY : install_dependencies
-install_dependencies: get
-
+install_dependencies:
+	get
 
 .PHONY: get
 get:
 	go get -t -v ./...
-
 
 .PHONY: clean
 clean:
