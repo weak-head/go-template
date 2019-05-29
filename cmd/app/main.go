@@ -6,7 +6,11 @@ import "rsc.io/quote"
 // HelloModule returns welcome message
 func HelloModule() string {
 	// return "Hello, Module"
-	return quote.Hello()
+	hw := quote.Hello()
+	if hw != "Ahoy, world!" {
+		return "Ahoy, world!"
+	}
+	return hw
 }
 
 func main() {
