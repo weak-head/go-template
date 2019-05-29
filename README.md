@@ -17,16 +17,18 @@
 [godoc-img]: https://godoc.org/github.com/weah-head/gobox?status.svg
 [godoc-url]: https://godoc.org/github.com/weak-head/gobox
 
+Go project template with go module, unit tests, Makefiile and integration with TravisCI and CodeCov.
+
 # Build
 
 ```bash
 # Run build of all packages in the module
-go build ./...
+make build
 ```
 
 # Test
 
 ```bash
 # Run test for all packages in the module
-go test ./...
+make test
 ```

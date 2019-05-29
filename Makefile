@@ -47,3 +47,11 @@ get:
 .PHONY: clean
 clean:
 	go clean ./...
+
+.PHONY: build
+build: install_dependencies
+	go build ./...
+
+.PHONY: test_no_cov
+test_no_cov:
+	go test ./...
